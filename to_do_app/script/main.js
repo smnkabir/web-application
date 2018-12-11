@@ -18,14 +18,16 @@ function addItem(){
         input.value = "";
     }
     else{
-        var msg = document.querySelector(".msg");
+        var divMsg = document.querySelector(".divMsg");
+        var msg = document.createElement("p");
         msg.classList.add("alert");
         msg.classList.add("alert-warning");
         msg.innerHTML = "NO item to add";
+        divMsg.appendChild(msg);
     }
 }
 function clearMsg(){
-    var msg = document.querySelector(".msg");
+    var msg = document.querySelector(".divMsg");
     msg.innerHTML = "";
 }
 function clearUL(){
